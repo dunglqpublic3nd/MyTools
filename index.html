@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Getting Started</title>
+    <style>
+        #app{
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 5px;
+        }
+
+        #output,
+        #textFileReader,
+        #test,
+        #btnAnswer {
+            display: none;
+        }
+
+        .left {
+            width: 55%;
+        }
+
+        .right {
+            width: 40%;
+
+        }
+
+        .right-box {
+            width: 100%;
+
+            padding-left: 10px;
+            border-left: 1px dashed gray;
+            height: 100%;
+        }
+
+        #controls>* {
+            float: right
+        }
+
+        #answer {
+            margin-top: 10px;
+            width: 100%;
+            border-top: 1px dashed gray;
+            clear: both;
+            float: left;
+            padding: 10px;
+            font-size: 20px;
+            color: gold;
+            font-weight: bolder;
+            box-sizing: border-box;
+        }
+
+        #btnNext {
+            margin-left: 10px;
+        }
+
+        #question {
+            font-size: 70px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            color: crimson;
+            text-align: center;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+    </style>
+    <!-- <script src="https://unpkg.com/lodash@4.17.20"></script> -->
+</head>
+
+<body>
+    <div id="app">
+        <div class="left">
+            <input id="btnStart" type="button" value="Start" />
+            <input type="file" title="open" id="textFileReader" />
+            <div id="test">
+                <div id="question"></div>
+                <div id="controls">
+                    <button type="button" id="btnNext">Next question</button>
+                    <button type="button" id="btnAnswer">Show answer</button>
+                </div>
+                <div id="answer"></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-box">
+                <button id="toggle" type="button">Toggle Word List</button>
+                <div>
+                    <pre id="output"></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
